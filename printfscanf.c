@@ -6,6 +6,7 @@ int main(void)
 	//printf("%d\n", age);
 	//age = 13;
 	//printf("%d\n", age);
+	//printf("%d\n", age);
 
 	// 실수형 변수에 대한 예제
 	//float f = 45.5343f; //45.53
@@ -46,6 +47,35 @@ int main(void)
 	//문자열 크기 사이즈 조정
 	//scanf_s("%s", str, sizeof(str)); 
 	//printf("%s\n", str);
+
+	char name[256];
+	printf("이름 :");
+	scanf_s("%s", name, sizeof(name));
+
+	int age;
+	printf("나이 :");
+	scanf_s("%d", &age);
+
+	float weight;
+	printf("몸무게 :");
+	scanf_s("%f", &weight);
+
+	double height;
+	printf("키 :");
+	scanf_s("%lf", &height);
+
+	char what[256];
+	printf("범죄명: ");
+	scanf_s("%s", what, sizeof(what));
+
+	printf("\n\n -- 범죄자 정보 -- \n\n");
+	printf("이름 : %s\n", name);
+	printf("나이 : %d\n", age);
+	printf("몸무게 : %.2f\n", weight);
+	printf("키 : %.2lf\n", height);
+	printf("범죄명 : %s\n", what);
+
+
 
 	return 0;
 }
