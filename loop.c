@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void)
+int main_loop(void)
 {
 	
 	//int b = 20;
@@ -90,7 +90,7 @@ int main(void)
 
 	//ÇÇ¶ó¹Ìµå ½×±â
 
-	int floor;
+	/*int floor;
 	printf("¸î ÃþÀ¸·Î ½×À» °Ç°¡¿ä? : ");
 	scanf_s("%d", &floor);
 
@@ -100,13 +100,13 @@ int main(void)
 		for(int j= i; j < floor - 1; j++)
 		{
 			printf(" ");
-		}
+		}S
 		for (int k = 0; k < i * 2 + 1 ; k++) 
 		{
 			printf("*");
 		}
-		printf("\n");
-	}
+		printf("\n");S
+	}*/
 
 
 	return 0;
