@@ -31,7 +31,7 @@ int main(void)
 
 		int answer = -1;
 		scanf_s("%d", &answer);
-		if (answer == 1)
+		if (answer == -1)
 		{
 			printf("프로그램을 종료합니다.");
 			exit(0);
