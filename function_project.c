@@ -13,7 +13,7 @@ void success();
 //실패 함수
 void fail();
 
-int main(void)
+int main_function_project(void)
 {
 	//문이 5개가 있고, 각 문마다 점점 어려운 수식 퀴즈가 출제(랜덤)
 	//맞히면 통과, 틀리면 실패
