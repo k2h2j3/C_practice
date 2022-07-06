@@ -10,5 +10,5 @@
 
 ## 2주차 :
 #### 비밀번호 문제 풀기(함수)  function.c => 함수 정의 방법 function_project.c => 비밀번호 문제풀이 프로젝트
-#### 배열 => array.c
+#### 배열 => array.c, 발모제 찾기 프로젝트 => array_project.c
 
