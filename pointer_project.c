@@ -7,6 +7,7 @@ int* cursor; //어떤 어항에게 줄 커서
 void initData();
 void printFishes();
 void decreaseWater(long elapsedTime);
+int checkFishAlive();
 
 int main(void)
 {
@@ -25,7 +26,7 @@ int main(void)
 	while (1)
 	{
 		printFishes();
-		printf("몇 번 어항에 물을 주시겠어요?");
+		printf("몇 번 어항에 물을 주시겠어요?\n");
 		scanf_s("%d", &num);
 
 		//입력 값 체크
@@ -69,12 +70,25 @@ int main(void)
 			//최종 레벨
 			if (level == 5)
 			{
-				printf("\n\n최고 레벨 달성!, 게임을 종료합니다");
+				printf("\n\n최고 레벨 달성!, 게임을 종료합니다\n\n");
 				exit(0);
 			}
 		}
 
 		//모든 물고기가 죽었는지 확인
+		if (checkFishAlive() == 0)
+		{
+			//물고기 모두 사망
+			printf("모든 물고기가 죽었습니다 ㅠㅠ\n");
+			exit(0);
+
+		}
+		else  //최소 한 마리 이상 생존
+		{
+			printf("물고기가 아직 살아있어요!\n");
+		}
+		preElapsedTime = totalElapsedTime;  //
+	
 
 	}
 
@@ -111,4 +125,14 @@ void decreaseWater(long elapsedTime)
 			arrayFish[i] = 0;
 		}
 	}
+}
+
+int checkFishAlive()
+{
+	for (int i = 0; i < 6; i++)
+	{
+		if (arrayFish[i] > 0)
+			return 1; //참, true
+	}
+	return 0; //false
 }
