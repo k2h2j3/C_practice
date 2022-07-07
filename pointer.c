@@ -1,6 +1,8 @@
 #include <stdio.h>
 void swap(int a, int b);
-int main(void)
+void swap_addr(int *a, int *b);
+void changearray(int *ptr);
+int main_pointer(void)
 {
 	//[철수] : 101호 => 메모리 공간의 주소
 	//[영희] : 201호
@@ -96,14 +98,28 @@ int main(void)
 
 	int a = 10;
 	int b = 20;
+	printf("a의 주소: %d\n", &a);
+	printf("b의 주소: %d\n", &b);
 	//a 와 b의 값을 바꾸기
 	printf("Swap 함수 전 => a : %d, b: %d\n", a, b);
 	swap(a, b);
-	printf("Swap 함수 후 => a : %d, b: %d\n", a, b);
+	printf("Swap 함수 후 => a : %d, b: %d\n", a, b); //함수전과 동일한결과
+	// a와 b 자체를 바꾼것이 아니기 때문
+	// 값에 의한 복사(Call by Value) -> 값만 복사한다는 의미 
 
-	// 값에 의한 복사(Call by Value) -> 값만 복사한다는 의미
+	// 메모리공간에 있는 주소값 자체를 넘기기
 
+	printf("(주소값 전달)Swap 함수 전 => a : %d, b: %d\n", a, b);
+	swap_addr(&a, &b);
+	printf("(주소값 전달)Swap 함수 후 => a : %d, b: %d\n", a, b);
 
+	//배열 값을 바꾸기, 배열일 때는 arr2 자체가 주소를 가진다.
+	int arr2[3] = { 10, 20, 30 };
+	changearray(arr2);
+	for (int i = 0; i < 3; i++)
+	{
+		printf("%d\n", arr2[i]);
+	}
 
 	return 0;
 }
@@ -113,5 +129,23 @@ void swap(int a, int b)
 	int temp = a;
 	a = b;
 	b = temp;
-	printf("Swap 함수 내 => .a : %d, b: %d\n", a, b);
+	printf("Swap 함수 내 => .a : %d, b: %d\n", a, b); //함수내에선 바뀜
+	printf("함수 내의 a의 주소: %d\n", &a);
+	printf("함수 내의 b의 주소: %d\n", &b); // main함수의 a와 b의 주소가 다른것을 볼 수 있다.
+}
+
+//a와 b의 주소를 스왑해주는 함수
+void swap_addr(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+	printf("(주소값 전달)Swap 함수 내 => .a : %d, b: %d\n", *a, *b); 
+	printf("함수 내의 a의 주소: %d\n", &a);
+	printf("함수 내의 b의 주소: %d\n", &b);
+}
+
+void changearray(int *ptr)
+{
+	ptr[2] = 50;
 }
