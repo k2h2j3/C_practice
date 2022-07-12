@@ -8,10 +8,14 @@
 #### 피라미드 쌓기(반복문) => loop.c
 #### 숫자맞추기 (조건문) => condition.c
 
+##
+
 ## 2주차 :
 #### 비밀번호 문제 풀기(함수)  function.c => 함수 정의 방법 function_project.c => 비밀번호 문제풀이 프로젝트
 #### 배열 => array.c, 발모제 찾기 프로젝트 => array_project.c
 #### 포인터 => pointer.c , 물고기 키우기 프로젝트 => pointer_project.c
+
+##
 
 ## 3주차 :
 
