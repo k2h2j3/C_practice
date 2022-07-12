@@ -13,3 +13,5 @@
 #### 배열 => array.c, 발모제 찾기 프로젝트 => array_project.c
 #### 포인터 => pointer.c , 물고기 키우기 프로젝트 => pointer_project.c
 
+## 3주차 :
+
