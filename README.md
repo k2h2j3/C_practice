@@ -18,5 +18,6 @@
 ##
 
 ## 3주차 :
-#### 다중 배열 => m_array.c, 동물 카드 뒤집기 => m_array_project.c
+#### 다중 배열 => m_array.c, 동물 카드 뒤집기(미완) => m_array_project.c
+#### 구조체 => struct.c
 
