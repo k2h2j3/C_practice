@@ -25,6 +25,6 @@
 
 ## 4주차 :
 #### 1) conio.h 사용(_kbhit(), _getch()) => coniolib.c
-#### 2) windows.h 사용(gotoxy()) => windowlib.c , 방향키로 별 움직이기 => movestar.c
+#### 2) windows.h 사용(gotoxy(), Sleep()) => windowlib.c , 방향키로 별 움직이기 => movestar.c
 
 
