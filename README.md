@@ -24,5 +24,6 @@
 ## 
 
 ## 4주차 :
-#### 1) conio.h 헤더파일 함수 사용(_kbhit(), _getch()) => coniolib.c
+#### 1) conio.h 사용(_kbhit(), _getch()) => coniolib.c
+#### 2) windows.h 사용(gotoxy()) => windowlib.c
 
